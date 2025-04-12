@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Pizzeria Elegante | About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --light-bg: #f9f9f9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .header {
+            background-color: rgba(255, 255, 255, 0.95);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .hero-about {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .story-section {
+            padding: 5rem 2rem;
+            background-color: white;
+        }
+
+        .story-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .story-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .story-content {
+            padding: 2rem;
+        }
+
+        .story-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .story-text {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: #666;
+        }
+
+        .values-section {
+            padding: 5rem 2rem;
+            background-color: var(--light-bg);
+        }
+
+        .values-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .values-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .value-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .value-icon {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .value-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .value-text {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .team-section {
+            padding: 5rem 2rem;
+            background-color: white;
+        }
+
+        .team-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .team-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .team-member {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-member img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .team-content {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .team-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .team-role {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .team-bio {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .social-links {
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .story-container {
+                grid-template-columns: 1fr;
+            }
+
+            .story-image {
+                height: 300px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">La Pizzeria Elegante</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="About.html">About</a>
+                <a href="Menu.html">Menu</a>
+                <a href="Mail.html">Mail</a>
+                <a href="Contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero-about">
+        <div class="hero-content">
+            <h1 class="hero-title" data-aos="fade-up">Our Story</h1>
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">A tradition of excellence since 1985</p>
+        </div>
+    </section>
+
+    <section class="story-section">
+        <div class="story-container">
+            <img src="https://images.unsplash.com/photo-1542834369-f10ebf06d3e0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" 
+                 alt="Restaurant Interior" 
+                 class="story-image"
+                 data-aos="fade-right">
+            <div class="story-content" data-aos="fade-left">
+                <h2 class="story-title">Our Heritage</h2>
+                <p class="story-text">Founded in 1985 by the Rossi family, La Pizzeria Elegante began as a small trattoria in the heart of Little Italy. Our commitment to authentic Italian cuisine and warm hospitality has made us a beloved destination for food enthusiasts for over three decades.</p>
+                <p class="story-text">Every dish we serve is crafted with passion and precision, using only the finest ingredients sourced both locally and from select Italian suppliers. Our wood-fired pizzas and homemade pasta have earned us numerous accolades and a loyal following.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="values-section">
+        <div class="values-container">
+            <h2 class="values-title" data-aos="fade-up">Our Values</h2>
+            <div class="values-grid">
+                <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-heart value-icon"></i>
+                    <h3 class="value-title">Passion</h3>
+                    <p class="value-text">We pour our hearts into every dish we create, ensuring each meal is a memorable experience.</p>
+                </div>
+                <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-leaf value-icon"></i>
+                    <h3 class="value-title">Quality</h3>
+                    <p class="value-text">Only the finest, freshest ingredients make it into our kitchen and onto your plate.</p>
+                </div>
+                <div class="value-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-users value-icon"></i>
+                    <h3 class="value-title">Family</h3>
+                    <p class="value-text">We treat every guest like family, creating a warm and welcoming atmosphere.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <div class="team-container">
+            <h2 class="team-title" data-aos="fade-up">Meet Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Chef Marco">
+                    <div class="team-content">
+                        <h3 class="team-name">Chef Marco Rossi</h3>
+                        <p class="team-role">Executive Chef</p>
+                        <p class="team-bio">With over 20 years of experience in Italian cuisine, Chef Marco brings authentic flavors and innovative techniques to our kitchen.</p>
+                    </div>
+                </div>
+                <div class="team-member" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1566554273541-37a9ca77b91f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Sofia">
+                    <div class="team-content">
+                        <h3 class="team-name">Sofia Bianchi</h3>
+                        <p class="team-role">Pastry Chef</p>
+                        <p class="team-bio">Sofia's passion for desserts and attention to detail creates the perfect ending to every meal.</p>
+                    </div>
+                </div>
+                <div class="team-member" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1542178243-bc20204b769f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Antonio">
+                    <div class="team-content">
+                        <h3 class="team-name">Antonio Romano</h3>
+                        <p class="team-role">Pizza Master</p>
+                        <p class="team-bio">A third-generation pizza maker, Antonio's expertise with our wood-fired oven is unmatched.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 La Pizzeria Elegante. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>

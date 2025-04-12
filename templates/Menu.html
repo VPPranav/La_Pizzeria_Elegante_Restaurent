@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Pizzeria Elegante | Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --light-bg: #f9f9f9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .header {
+            background-color: rgba(255, 255, 255, 0.95);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .menu-hero {
+            height: 50vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .menu-hero-content {
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .menu-hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .menu-section {
+            padding: 5rem 2rem;
+            background-color: var(--light-bg);
+        }
+
+        .menu-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        table {
+            width: 100%;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        th {
+            padding: 1.5rem;
+            text-align: left;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+        }
+
+        td {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .pizza {
+            color: var(--primary-color);
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .first-col {
+            color: #666;
+            font-size: 0.9rem;
+            font-style: italic;
+            padding-bottom: 1.5rem;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .social-links {
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            .menu-hero-title {
+                font-size: 2.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            table {
+                font-size: 0.9rem;
+            }
+
+            th, td {
+                padding: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">La Pizzeria Elegante</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="About.html">About</a>
+                <a href="Menu.html">Menu</a>
+                <a href="Contact.html">Contact</a>
+                <a href="Mail.html">Mail</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="menu-hero">
+        <div class="menu-hero-content">
+            <h1 class="menu-hero-title">Our Menu</h1>
+        </div>
+    </section>
+
+    <section class="menu-section">
+        <div class="menu-container">
+            <table>
+                <thead>
+                    <tr id="first-row">
+                        <th class="pizza">Pizza</th>
+                        <th>Medium</th>
+                        <th>Large</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="pizza">Prime</td>
+                        <td>17.49$</td>
+                        <td>20.99$</td>
+                    </tr>
+                    <tr>
+                        <td class="first-col" colspan="3">Pepperoni, Italian sausage, mushroom, onion & green pepper</td>
+                    </tr>
+                    <tr>
+                        <td class="pizza">Milano</td>
+                        <td>16.50$</td>
+                        <td>18.50$</td>
+                    </tr>
+                    <tr>
+                        <td class="first-col" colspan="3">Artichoke hearts, sun-dried tomatoes, roasted garlic, black olives, hot sausage, roasted eggplant</td>
+                    </tr>
+                    <tr>
+                        <td class="pizza">Rome</td>
+                        <td>16.50$</td>
+                        <td>18.50$</td>
+                    </tr>
+                    <tr>
+                        <td class="first-col" colspan="3">Pepperoni, hot sausage, onions, green peppers, mushrooms</td>
+                    </tr>
+                    <tr>
+                        <td class="pizza">Margherita</td>
+                        <td>14.95$</td>
+                        <td>16.50$</td>
+                    </tr>
+                    <tr>
+                        <td class="first-col" colspan="3">Tomato sauce, fresh mozzarella, basil</td>
+                    </tr>
+                    <tr>
+                        <td class="pizza">Napolitana</td>
+                        <td>19.95$</td>
+                        <td>23.75$</td>
+                    </tr>
+                    <tr>
+                        <td class="first-col" colspan="3">Pepperoni, meatball, fresh mushrooms, sausage, fresh peppers, onions, anchovies</td>
+                    </tr>
+                    <tr>
+                        <td class="pizza">Primavera (white)</td>
+                        <td>18.95$</td>
+                        <td>20.95$</td>
+                    </tr>
+                    <tr>
+                        <td class="first-col" colspan="3">Fresh sliced tomatoes, marinated artichokes, mushrooms, black olives and a touch of garlic - served with or without mozzarella</td>
+                    </tr>
+                    <tr>
+                        <td class="pizza">Fra Diavolo</td>
+                        <td>18.95$</td>
+                        <td>20.95$</td>
+                    </tr>
+                    <tr>
+                        <td class="first-col" colspan="3">Hot cherry peppers, sausage and onions with tomato sauce and mozzarella</td>
+                    </tr>
+                    <tr>
+                        <td class="pizza">Domenico</td>
+                        <td>18.95$</td>
+                        <td>20.95$</td>
+                    </tr>
+                    <tr>
+                        <td class="first-col" colspan="3">Fresh mushrooms, eggplant, ham, marinara sauce, covered with mozzarella</td>
+                    </tr>
+                    <tr>
+                        <td class="pizza">Tricolore (white)</td>
+                        <td>18.95$</td>
+                        <td>20.95$</td>
+                    </tr>
+                    <tr>
+                        <td class="first-col" colspan="3">Mozzarella, sun-dried tomatoes, grilled chicken and spinach, drizzled with olive oil and extra "pinch" of grated parmigiano</td>
+                    </tr>
+                    <tr>
+                        <td class="pizza">Veggie</td>
+                        <td>19.95$</td>
+                        <td>23.75$</td>
+                    </tr>
+                    <tr>
+                        <td class="first-col" colspan="3">Mushrooms, peppers, onions, broccoli, olives, eggplant, fresh tomatoes</td>
+                    </tr>
+                    <tr>
+                        <td class="pizza">Hawaiian pizza</td>
+                        <td>18.95$</td>
+                        <td>20.95$</td>
+                    </tr>
+                    <tr>
+                        <td class="first-col" colspan="3">Pineapple, ham, bacon and mozzarella with red sauce</td>
+                    </tr>
+                    <tr>
+                        <td class="pizza">Meat lovers</td>
+                        <td>19.95$</td>
+                        <td>23.75$</td>
+                    </tr>
+                    <tr>
+                        <td class="first-col" colspan="3">Sausage, meatball, bacon, pepperoni & ham</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 La Pizzeria Elegante. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
