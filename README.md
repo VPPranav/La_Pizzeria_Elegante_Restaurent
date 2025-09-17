@@ -77,4 +77,3 @@ Contributions are welcome! Please fork the repository and create a pull request 
 
 ---
 
-*Note: Since this appears to be a Flask application, you might want to add more specific instructions about the Python setup if needed. The requirements.txt file suggests there are Python dependencies that need to be installed.*
